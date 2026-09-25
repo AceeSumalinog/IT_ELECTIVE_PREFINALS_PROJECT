@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Student System</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+            /* Teal Color Palette Theme */
+            :root {
+                --dark-teal: #004d40;
+                --medium-teal: #00796b;
+                --main-teal: #00897b;
+                --soft-teal: #4db6ac;
+                --light-teal: #e0f2f1;
+            }
+
+            body {
+                background-color: #f4fdfc;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .navbar-custom {
+                background-color: var(--dark-teal);
+            }
+
+            .navbar-custom .navbar-brand,
+            .navbar-custom .nav-link {
+                color: #ffffff !important;
+                font-weight: 600;
+            }
+
+            .custom-card {
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+                border-top: 5px solid var(--medium-teal);
+                padding: 25px;
+            }
+
+            .btn-teal {
+                background-color: var(--main-teal);
+                color: white;
+                border: none;
+            }
+
+            .btn-teal:hover {
+                background-color: var(--dark-teal);
+                color: white;
+            }
+
+            .table-teal {
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .table-teal thead {
+                background-color: var(--medium-teal);
+                color: white;
+            }
+
+            footer {
+                background-color: var(--dark-teal);
+                color: white;
+                padding: 15px 0;
+                margin-top: 40px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-custom mb-4 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="/Student">🎓 Student Management</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            &copy; 2026 - Student Portal - IT Elective Prefinals
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
